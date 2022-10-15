@@ -3,20 +3,21 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 body {
-    font-family:'Poppins', sans-serif;
-    background: #000000;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Poppins', sans-serif;
+    background: rgb(128, 19, 54);
+    background: linear-gradient(340deg, rgba(128, 19, 54, 1) 0%, rgba(81, 10, 50, 1) 22%, rgba(45, 20, 44, 1) 56%, #090807 85%);
+    background-repeat: no-repeat;
+    height: 100%;
 }
 
 .navbar {
-    background-color: #090807d0;
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 75px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
@@ -28,21 +29,78 @@ a {
     text-decoration: none;
     color: white;
 }
-.navbar-items ul li{
+
+.navbar-items ul li {
     list-style: none;
     margin: 0 10px;
+    font-weight: 300;
 }
+
 .navbar-items ul {
     display: flex;
     justify-content: space-around;
 }
+
 .navbar-items {
     width: 30%;
     z-index: 2;
 }
+
 .logo {
-    transition: 0.5s;
+    width: 3.7rem;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    font-size: 22px;
 }
-.logo:hover {
-    color: salmon;
+
+span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
+.words:nth-child(2) {
+    right: 4px;
+}
+
+
+.animated{
+    top: 8%;
+    color: rgba(128, 19, 54, 1);
+    animation: jello-horizontal .9s linear both
+    
+}
+
+@keyframes jello-horizontal {
+    0% {
+        color: white;
+        transform: scale3d(1, 1, 1)
+    }
+
+    30% {
+        transform: scale3d(1.25, .75, 1)
+    }
+
+    40% {
+        transform: scale3d(.75, 1.25, 1)
+    }
+
+    50% {
+        color: rgba(128, 19, 54, 1);
+        transform: scale3d(1.15, .85, 1)
+    }
+
+    65% {
+        transform: scale3d(.95, 1.05, 1)
+    }
+
+    75% {
+        transform: scale3d(1.05, .95, 1)
+    }
+
+    100% {
+        color: white;
+        transform: scale3d(1, 1, 1)
+    }
+}
+
