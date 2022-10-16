@@ -108,35 +108,76 @@ span {
 
 .main {
     width: 100%;
-    height: min-content;
+    position: absolute;
+    top: 0;
 }
 
 .home {
     height: 100vh;
     width: 100%;
     position: absolute;
+    top: 0;
     display: flex;
     justify-content: space-around;
+    align-items: center;
+}
+.name {
+    width: 50%;
+    text-align: left;
+    display: grid;
+    justify-content: center;
     align-items: center;
 }
 
 .name h1{
     font-weight: 600;
     font-size: 36px;
+    line-height: 1;
 }
 .name h2 strong{
     font-weight: 300;
     font-size: 22px;
 }
-
+.object {
+    width: 50%;
+    height: 100%;
+}
 .contact {
     width: 120px;
     height: 40px;
     background-color: transparent;
-    border-radius: 6px;
+    border-radius: 20px;
     font-family: 'Poppins', sans-serif;
-    font-weight: 200;
-    border:2px solid rgb(92, 35, 90);
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-size: 14px;
+    border:2px solid rgba(255, 255, 255, 0.822);
+    position: relative;
+    transition: 1s;
+    margin-top: 1rem;
+}
+
+.contact::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:rgb(255, 255, 255);
+    border-radius: 20px;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    transition:transform 0.3s;
+    transform-origin:1;
+    transition-timing-function: linear;
+    transform: scaleX(0);
+}
+.contact:hover {
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.562);
+    cursor: pointer;
+}
+.contact:hover:after{
+    transform: scaleX(1);
 }
