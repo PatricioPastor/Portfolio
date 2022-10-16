@@ -9,8 +9,6 @@ body {
     font-family: 'Poppins', sans-serif;
     background: rgb(128, 19, 54);
     background: linear-gradient(340deg, rgba(128, 19, 54, 1) 0%, rgba(81, 10, 50, 1) 22%, rgba(45, 20, 44, 1) 56%, #090807 85%);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
     background-repeat: no-repeat;
     height: 100%;
 }
