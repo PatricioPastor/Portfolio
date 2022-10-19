@@ -1,3 +1,5 @@
+AOS.init();
+
 const elements = document.getElementsByClassName("words");
 
 
