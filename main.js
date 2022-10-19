@@ -28,3 +28,28 @@ const hiddenElements = document.querySelectorAll('.hidden');
 
 
 hiddenElements.forEach((el) => observer.observe(el))
+
+
+const navMenu = document.querySelector('.navbar-items');
+
+
+
+document.querySelector(".button-ham").addEventListener("click", animateBars);
+
+var line1__bars = document.querySelector(".item1-menu");
+var line2__bars = document.querySelector(".item2-menu");
+var line3__bars = document.querySelector(".item3-menu");
+
+function animateBars(){
+    line1__bars.classList.toggle("activeline1__bars-menu");
+    line2__bars.classList.toggle("activeline2__bars-menu");
+    line3__bars.classList.toggle("activeline3__bars-menu");
+    navMenu.classList.toggle("active-menu");
+
+    if (navMenu.classList.contains("active-menu")){
+        navToggle.setAttribute("aria-label", "Cerrar menu");
+    }else{
+        navToggle.setAttribute("aria-label", "Abrir");
+        navMenu.classList.add("active-menu");
+    };
+}
